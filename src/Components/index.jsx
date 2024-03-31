@@ -12,13 +12,7 @@ export default function Home() {
   const [name, setName] = useState("");
   const [username, setUserName] = useState("");
   const [users, setUsers] = useState([]);
-  const handleSubmit = (e) => {
-    axios.post(`http://localhost:8080/users`, { name }).then((res) => {
-      setUsers([users, res.data]);
-      setName("");
-      setUserName("");
-    });
-  };
+
   // USER CREATE
   const handleAdd = () => {
     const users = {
